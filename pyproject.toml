@@ -1,0 +1,2 @@
+[tool.mypy]
+disallow_incomplete_defs = true
