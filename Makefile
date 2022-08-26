@@ -16,7 +16,8 @@ docs: ## Open swagger docs
 
 ##@ DB
 .PHONY add-migration:
-add-migration: ## Create alembic migration. `make add-migration name=init`
+add-migration: ## Create migration. Usage make add-migration name=""
+	@test -n "$(name)" || (echo 'A name must be defined for the migration. Ex: make add-migration name=init' && exit 1)
 	docker-compose exec web alembic revision --autogenerate -m "$(name)"
 
 .PHONY migrate:
