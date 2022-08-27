@@ -32,11 +32,10 @@ test: ## Run tests
 ##@ Lint
 .PHONY check:
 check: ## mypy, flake8m, isort and black checks
-	mypy /app
-	mypy /tests
-	flake8 .
-	isort .
-	black .
+	mypy ./app ./tests
+	flake8 ./app ./tests
+	isort ./app ./tests
+	black ./app ./tests
 
 ##@ Misc
 .PHONY logs:

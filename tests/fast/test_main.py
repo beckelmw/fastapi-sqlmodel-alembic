@@ -1,6 +1,7 @@
 import pytest
-from app.internal.models import User
 from httpx import AsyncClient
+
+from app.internal.models import User
 
 users: list[User] = [
     User(

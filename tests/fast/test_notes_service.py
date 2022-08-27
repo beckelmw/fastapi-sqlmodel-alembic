@@ -1,6 +1,7 @@
 from uuid import uuid4
 
 import pytest
+
 from app.notes.models import Note
 from app.notes.notes_service import NotesService, NotFoundException
 

@@ -3,12 +3,13 @@ from typing import AsyncGenerator, Generator
 
 import pytest
 import pytest_asyncio
-from app.internal.db import async_engine
-from app.main import app
 from httpx import AsyncClient
 from sqlalchemy.orm import sessionmaker
 from sqlmodel import SQLModel
 from sqlmodel.ext.asyncio.session import AsyncSession
+
+from app.internal.db import async_engine
+from app.main import app
 
 
 @pytest.fixture(scope="session")
