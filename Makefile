@@ -27,7 +27,7 @@ test: ## Run tests
 ##@ Lint
 check: ## mypy, flake8m, isort and black checks
 	mypy ./app ./tests
-	flake8 ./app ./tests
+	flake8 ./app ./tests --max-line-length=90
 	isort ./app ./tests
 	black ./app ./tests
 
