@@ -32,11 +32,11 @@ test: ## Run tests
 ##@ Lint
 .PHONY check:
 check: ## mypy, flake8m, isort and black checks
-	mypy project/app
-	mypy project/tests
-	flake8 project
-	isort project
-	black project
+	mypy /app
+	mypy /tests
+	flake8 .
+	isort .
+	black .
 
 ##@ Misc
 .PHONY logs:
@@ -45,11 +45,11 @@ logs: ## Get web logs
 
 .PHONY install:
 install: ## Install python dependencies
-	pip install -r project/requirements.txt
+	pip install -r requirements.txt
 
 .PHONY freeze:
 freeze: ## Save current dependencies to requirements.txt
-	pip freeze project/requirements.txt
+	pip freeze requirements.txt
 
 .PHONY: help
 help: ## Help
